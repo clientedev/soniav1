@@ -1,10 +1,19 @@
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Heart, HeartPulse, Car, Building, Plane, ArrowRight, CheckCircle2, Users, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Images
+// Hero slideshow images
+import heroSlide1 from "@/assets/images/hero-slide-1.png";
+import heroSlide2 from "@/assets/images/hero-slide-2.png";
+import heroSlide3 from "@/assets/images/hero-slide-3.png";
+import heroSlide4 from "@/assets/images/hero-slide-4.png";
+
+// Fallback image
 import heroBg from "@/assets/images/hero-bg.png";
+
+const heroSlides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
 const services = [
   {
@@ -40,18 +49,49 @@ const services = [
 ];
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main className="flex-1 w-full pt-20">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-10 pb-20 overflow-hidden">
-        {/* Background Image & Overlay */}
+        {/* Slideshow Background */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroBg} 
-            alt="Abstract protection concept" 
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/20" />
+          <AnimatePresence initial={false}>
+            <motion.img
+              key={currentSlide}
+              src={heroSlides[currentSlide]}
+              alt="SC Santiago"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+            />
+          </AnimatePresence>
+          {/* Transparent dark overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
+          {/* Bottom fade */}
+          <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-background/20 to-transparent" />
+        </div>
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${i === currentSlide ? "w-8 bg-white" : "w-2 bg-white/40"}`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
         </div>
 
         <div className="container relative z-10 mx-auto px-4 md:px-6">

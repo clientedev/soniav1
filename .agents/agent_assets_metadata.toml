@@ -42,3 +42,27 @@ id = "-llfmk2LOuDTCsGUlGlaM"
 uri = "file://artifacts/sc-santiago/src/assets/images/about-header.png"
 type = "image"
 title = "professional financial advisor office"
+
+[[generated]]
+id = "acLhayFQX3xXV62HZqfkV"
+uri = "file://artifacts/sc-santiago/src/assets/images/hero-slide-1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "8M6p_x2EtN3gj-cnL5uzM"
+uri = "file://artifacts/sc-santiago/src/assets/images/hero-slide-2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "T-Kcbqw0NItQKKhKXtuBe"
+uri = "file://artifacts/sc-santiago/src/assets/images/hero-slide-3.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "vLwyFhiN5-1CwFNsKo16X"
+uri = "file://artifacts/sc-santiago/src/assets/images/hero-slide-4.png"
+type = "image"
+title = "generated_image"
