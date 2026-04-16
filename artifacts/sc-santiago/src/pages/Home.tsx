@@ -77,7 +77,7 @@ export default function Home() {
             />
           </AnimatePresence>
           {/* Transparent dark overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/55" />
           {/* Bottom fade */}
           <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-background/20 to-transparent" />
         </div>
