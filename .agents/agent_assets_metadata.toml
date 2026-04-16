@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "-kfPU3PvI0xqI_7ozM2-R"
+uri = "file://artifacts/sc-santiago/src/assets/images/hero-bg.png"
+type = "image"
+title = "hero background abstract blue"
+
+[[generated]]
+id = "xKCaLxF4KeT5D_usc66iv"
+uri = "file://artifacts/sc-santiago/src/assets/images/service-vida.png"
+type = "image"
+title = "family life insurance lifestyle"
+
+[[generated]]
+id = "3Q4Xewzjn7Vyu0rkRTCPE"
+uri = "file://artifacts/sc-santiago/src/assets/images/service-saude.png"
+type = "image"
+title = "health insurance doctor consultation"
+
+[[generated]]
+id = "o-sViXLQD146kQYGCPLRi"
+uri = "file://artifacts/sc-santiago/src/assets/images/service-consorcio.png"
+type = "image"
+title = "car and house keys financial"
+
+[[generated]]
+id = "rFoM2UiODtVVUfEeVTGXz"
+uri = "file://artifacts/sc-santiago/src/assets/images/service-previdencia.png"
+type = "image"
+title = "happy senior couple retirement"
+
+[[generated]]
+id = "Bj9BsY2U38BO6lodZB5J-"
+uri = "file://artifacts/sc-santiago/src/assets/images/service-viagem.png"
+type = "image"
+title = "person traveling at airport"
+
+[[generated]]
+id = "-llfmk2LOuDTCsGUlGlaM"
+uri = "file://artifacts/sc-santiago/src/assets/images/about-header.png"
+type = "image"
+title = "professional financial advisor office"
