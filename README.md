@@ -1,23 +1,21 @@
 # SC Santiago — Corretora de Seguros de Vida
 
-Site institucional da SC Santiago Corretora de Seguros de Vida (São Paulo, Brasil), construído em React + Vite.
+Site institucional da SC Santiago Corretora de Seguros de Vida (São Paulo, Brasil).
 
 ## Deploy no Railway
 
-Clique no botão abaixo para fazer o deploy direto no Railway:
-
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template?template=https%3A%2F%2Fgithub.com%2FSEU-USUARIO%2FSEU-REPOSITORIO)
 
-> Substitua `SEU-USUARIO/SEU-REPOSITORIO` no botão acima pela URL real do seu repositório no GitHub depois de subir o código.
+**O Railway vai criar um único serviço** usando o `Dockerfile` na raiz do projeto. Não vai dividir em múltiplos serviços.
 
-### Como publicar (passo a passo)
+### Passo a passo
 
-1. Suba este projeto para um repositório no GitHub (público ou privado conectado ao Railway).
-2. Acesse [railway.com/new](https://railway.com/new) e selecione **Deploy from GitHub repo**.
-3. Escolha este repositório. O Railway vai detectar automaticamente o `Dockerfile` e iniciar o build.
-4. Quando o build terminar, vá em **Settings → Networking → Generate Domain** para gerar o link público (`*.up.railway.app`).
+1. Suba este repositório para o GitHub.
+2. Substitua `SEU-USUARIO/SEU-REPOSITORIO` no botão acima pela URL do seu repo.
+3. Clique no botão. O Railway vai detectar o `Dockerfile` e criar **um serviço único**.
+4. Em **Settings → Networking → Generate Domain**, gere o link público (`*.up.railway.app`).
 
-Não é necessário configurar variáveis de ambiente — o `Dockerfile` já cuida do build e o servidor estático usa a porta fornecida pelo Railway automaticamente.
+Não precisa configurar variáveis de ambiente — o Railway injeta a `PORT` automaticamente e o Dockerfile cuida do resto.
 
 ## Desenvolvimento local
 
@@ -26,7 +24,7 @@ pnpm install
 PORT=5173 BASE_PATH=/ pnpm --filter @workspace/sc-santiago run dev
 ```
 
-## Build de produção
+## Build local
 
 ```bash
 PORT=3000 BASE_PATH=/ pnpm --filter @workspace/sc-santiago run build
