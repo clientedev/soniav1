@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SiInstagram, SiFacebook } from "react-icons/si";
-import logoLight from "@/assets/images/logo-light.png";
+import logoLight from "@/assets/images/logo-footer-transparent.png";
 
 export function Footer() {
   return (
@@ -10,11 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center mb-6 group -ml-1 -my-2">
+            <Link href="/" className="inline-flex items-center mb-6 group bg-white rounded-xl px-4 py-3">
               <img
                 src={logoLight}
                 alt="SC Santiago Corretora de Seguros"
-                className="h-12 md:h-14 w-auto object-contain"
+                className="h-14 md:h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
