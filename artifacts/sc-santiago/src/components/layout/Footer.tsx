@@ -10,11 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center mb-6 group -ml-2 -my-4">
+            <Link href="/" className="inline-flex items-center mb-6 group -ml-1 -my-2">
               <img
                 src={logoLight}
                 alt="SC Santiago Corretora de Seguros"
-                className="h-20 md:h-24 w-auto object-contain"
+                className="h-12 md:h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
