@@ -13,7 +13,7 @@ import heroSlide4 from "@/assets/images/hero-slide-4.png";
 // Fallback image
 import heroBg from "@/assets/images/hero-bg.png";
 import soniaPortrait from "@/assets/images/sonia-portrait.png";
-import partnersBg from "@/assets/images/partners-bg.png";
+import partnersFull from "@/assets/images/parceiros-full.png";
 
 const heroSlides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
@@ -383,54 +383,20 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={partnersBg}
-            alt="Parceiros"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-foreground/60 backdrop-blur-[2px]" />
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-serif font-bold text-white mb-4"
-            >
-              Parcerias de Confiança
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-white/70 text-lg max-w-2xl mx-auto"
-            >
-              Trabalhamos com as maiores e mais sólidas seguradoras do mercado para garantir a melhor proteção para você.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center justify-items-center">
-            {[
-              "ICATU", "Embracon", "AZOS", "Omint", "SulAmérica", 
-              "CENTAURO", "MAG SEGUROS", "Allianz", "PORTO SEGURO"
-            ].map((partner, i) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="text-white/90 font-serif text-xl md:text-2xl font-bold tracking-tight hover:text-white transition-colors cursor-default text-center px-4 py-2 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm w-full max-w-[200px] flex items-center justify-center min-h-[80px]"
-              >
-                {partner}
-              </motion.div>
-            ))}
-          </div>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center items-center"
+          >
+            <img
+              src={partnersFull}
+              alt="Nossos Parceiros"
+              className="w-full h-auto max-w-5xl rounded-2xl shadow-sm"
+            />
+          </motion.div>
         </div>
       </section>
 
