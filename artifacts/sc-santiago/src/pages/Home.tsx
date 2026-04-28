@@ -12,6 +12,7 @@ import heroSlide4 from "@/assets/images/hero-slide-4.png";
 
 // Fallback image
 import heroBg from "@/assets/images/hero-bg.png";
+import soniaPortrait from "@/assets/images/sonia-portrait.png";
 
 const heroSlides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
@@ -295,14 +296,15 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden">
-                <img 
-                  src={heroBg} 
-                  alt="Professional service" 
-                  className="w-full h-full object-cover opacity-80"
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
+                <img
+                  src={soniaPortrait}
+                  alt="Sônia Cristina Santiago"
+                  className="w-full h-full object-cover object-center"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-8 -left-8 bg-white text-foreground p-8 rounded-2xl shadow-2xl max-w-xs">
+              <div className="absolute -bottom-8 -left-4 md:-left-8 bg-white text-foreground p-7 rounded-2xl shadow-2xl max-w-[280px]">
                 <div className="flex text-amber-400 mb-3">
                   {[1,2,3,4,5].map(star => (
                     <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
@@ -310,10 +312,14 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="font-medium text-lg leading-snug mb-4">
-                  "A Sonia mudou nossa visão sobre seguros. Hoje nossa família dorme tranquila sabendo que estamos amparados."
+                <p className="font-serif italic text-lg leading-snug mb-3">
+                  "Tenho total confiança nela. Agora estou em paz."
                 </p>
-                <p className="text-sm text-muted-foreground font-bold">— Família Silva, São Paulo</p>
+                <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">— Guilherme Auada, Médico</p>
+              </div>
+              <div className="hidden md:block absolute -top-6 -right-6 bg-primary text-white px-6 py-4 rounded-2xl shadow-xl">
+                <p className="font-serif text-3xl font-bold leading-none">+13</p>
+                <p className="text-xs uppercase tracking-wider mt-1 text-white/80">anos de experiência</p>
               </div>
             </div>
           </div>

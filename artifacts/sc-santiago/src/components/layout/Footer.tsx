@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { Shield, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { SiInstagram, SiFacebook } from "react-icons/si";
+import logoLight from "@/assets/images/logo-light.png";
 
 export function Footer() {
   return (
@@ -9,14 +10,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6 group inline-flex">
-              <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center">
-                <Shield className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-xl leading-none text-white">SC Santiago</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/60 font-semibold">Corretora de Seguros</span>
-              </div>
+            <Link href="/" className="inline-flex items-center mb-6 group">
+              <img
+                src={logoLight}
+                alt="SC Santiago Corretora de Seguros"
+                className="h-16 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
               13 anos de experiência protegendo famílias e empresas em todo o Brasil. Confiança, transparência e o cuidado que você merece.

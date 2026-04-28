@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Shield } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoDark from "@/assets/images/logo-dark.png";
 
 const navLinks = [
   { href: "/", label: "Início" },
@@ -34,20 +35,21 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3"
-          : "bg-white py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-1"
+          : "bg-white py-2"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-              <Shield className="w-5 h-5" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-xl leading-none text-foreground">SC Santiago</span>
-              <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Corretora de Seguros</span>
-            </div>
+          <Link href="/" className="flex items-center group -my-2">
+            <img
+              src={logoDark}
+              alt="SC Santiago Corretora de Seguros"
+              className={cn(
+                "w-auto object-contain group-hover:scale-105 transition-all duration-300",
+                isScrolled ? "h-20 md:h-24" : "h-24 md:h-28"
+              )}
+            />
           </Link>
 
           {/* Desktop Nav */}

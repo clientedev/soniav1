@@ -15,13 +15,16 @@ A modern, professional institutional website for SC Santiago Corretora de Seguro
 - `/contato` — Contact (form, WhatsApp, social media, Google Maps)
 
 ### Features
-- Sticky navigation header with WhatsApp CTA button
+- Sticky navigation header with brand logo and WhatsApp CTA button
 - Floating WhatsApp button on all pages
 - Contact form with react-hook-form + zod validation
 - Framer Motion scroll animations
 - Social media links (Instagram, Facebook)
 - Fully in Brazilian Portuguese
-- Blue and white brand palette
+- Brand palette: dark navy + gold accent + white
+- Typography: Fraunces (serif headings) + Inter (sans body)
+- Brand logo (light/dark variants) used in Navbar and Footer
+- Sônia's portrait featured in the "Diferenciais" section
 
 ## Stack
 
