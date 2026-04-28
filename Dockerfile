@@ -12,6 +12,10 @@ COPY artifacts/sc-santiago ./artifacts/sc-santiago
 
 RUN sed -i '/api-client-react/d' artifacts/sc-santiago/package.json || true
 
+RUN node -e "const fs=require('fs');const p='artifacts/sc-santiago/tsconfig.json';const c=JSON.parse(fs.readFileSync(p));delete c.references;fs.writeFileSync(p,JSON.stringify(c,null,2));"
+
+RUN node -e "const fs=require('fs');const p='tsconfig.json';const c=JSON.parse(fs.readFileSync(p));c.references=[];fs.writeFileSync(p,JSON.stringify(c,null,2));"
+
 RUN cat > pnpm-workspace.yaml <<'EOF'
 packages:
   - artifacts/sc-santiago
