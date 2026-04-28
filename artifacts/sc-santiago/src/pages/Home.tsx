@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shield, Heart, HeartPulse, Car, Building, Plane, ArrowRight, CheckCircle2, Users, Clock, MapPin } from "lucide-react";
+import { Shield, Heart, HeartPulse, Car, Building, Plane, ArrowRight, CheckCircle2, Users, Clock, MapPin, Quote, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Hero slideshow images
@@ -14,6 +14,29 @@ import heroSlide4 from "@/assets/images/hero-slide-4.png";
 import heroBg from "@/assets/images/hero-bg.png";
 
 const heroSlides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
+
+const testimonials = [
+  {
+    name: "Ricardo T. F. Pires",
+    role: "Médico",
+    text: "Sou muito grato por ter a Sônia como minha corretora; admiro a seriedade e o desprendimento em encontrar a solução ideal pra mim e minha família. Isso vale ouro. Obrigado!",
+  },
+  {
+    name: "Guilherme De J. M. Auada",
+    role: "Médico",
+    text: "Eu que agradeço, Sônia. Tenho total confiança em você. Ao ponto de confiar minha família a você e mudar todo o meu outro seguro. Agora estou em paz. Muito obrigado por tudo.",
+  },
+  {
+    name: "Amerisa F. Leite",
+    role: "Empresária",
+    text: "Sônia é uma profissional altamente comprometida, dedicada a oferecer soluções que realmente façam diferença ao longo da vida de seus clientes. Com ampla experiência no mercado, construiu uma trajetória baseada em confiança — fui, inclusive, um dos primeiros clientes a integrar sua carteira, justamente por acreditar em sua capacidade de sempre buscar o melhor para mim. Seu trabalho é pautado por uma visão de longo prazo, prezando pelo cuidado e pela segurança de cada cliente. Destaca-se pela excelência no atendimento e pela forma ética e atenciosa com que conduz suas recomendações, tratando cada necessidade como se fosse de sua própria família.",
+  },
+  {
+    name: "Lucas Rosin",
+    role: "Empresário",
+    text: "Conheci a Sônia muito novo, e ela me explicou da melhor maneira possível a necessidade de se proteger, a importância de um seguro, juntamente com suas diversas opções e peculiaridades, e sempre me transmitiu segurança, fazendo o melhor para mim e para o meu momento de vida. Confio tanto no trabalho e na atenção que ela sempre dedicou que a indiquei para dezenas de pessoas. Ainda hoje é sempre minha primeira consulta quando preciso de qualquer tipo de suporte. Obrigado por tudo.",
+  },
+];
 
 const services = [
   {
@@ -293,6 +316,61 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground font-bold">— Família Silva, São Paulo</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gray-50/70">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Depoimentos</h2>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+              O que nossos clientes dizem
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Histórias reais de famílias e profissionais que confiam o seu futuro ao trabalho da Sônia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((t, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all relative flex flex-col"
+              >
+                <Quote className="w-10 h-10 text-primary/20 mb-4 shrink-0" />
+
+                <div className="flex text-amber-400 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 fill-current" />
+                  ))}
+                </div>
+
+                <p className="text-foreground/90 leading-relaxed mb-6 flex-1 italic">
+                  “{t.text}”
+                </p>
+
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-serif font-bold text-lg shrink-0">
+                    {t.name
+                      .split(" ")
+                      .filter((w) => w.length > 1 && w[0] === w[0].toUpperCase())
+                      .slice(0, 2)
+                      .map((w) => w[0])
+                      .join("")}
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground leading-tight">{t.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

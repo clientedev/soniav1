@@ -9,7 +9,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 A modern, professional institutional website for SC Santiago Corretora de Seguros de Vida (São Paulo, Brazil). Built as a React + Vite frontend-only app with no backend.
 
 ### Pages
-- `/` — Home (hero, services overview, trust indicators, CTAs)
+- `/` — Home (hero, services overview, trust indicators, testimonials, CTAs)
 - `/sobre` — About (Sonia Cristina Santiago, 13 years of history)
 - `/servicos` — Services (Seguro de Vida, Plano de Saúde, Consórcio, Previdência, Seguro de Viagem)
 - `/contato` — Contact (form, WhatsApp, social media, Google Maps)
