@@ -58,4 +58,4 @@ COPY --from=builder /app/artifacts/sc-santiago/dist/public ./public
 
 ENV NODE_ENV=production
 
-CMD ["sh", "-c", "serve -s public -l 0.0.0.0:${PORT:-3000}"]
+CMD ["sh", "-c", "serve -s public -p ${PORT:-3000}"]
