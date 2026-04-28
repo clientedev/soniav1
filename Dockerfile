@@ -57,8 +57,5 @@ RUN npm install -g serve@14
 COPY --from=builder /app/artifacts/sc-santiago/dist/public ./public
 
 ENV NODE_ENV=production
-ENV PORT=3000
 
-EXPOSE 3000
-
-CMD ["sh", "-c", "serve -s public -l ${PORT:-3000}"]
+CMD ["sh", "-c", "serve -s public -l 0.0.0.0:${PORT:-3000}"]
