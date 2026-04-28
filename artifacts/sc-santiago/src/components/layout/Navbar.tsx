@@ -41,13 +41,13 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center group -my-2">
+          <Link href="/" className="flex items-center group -my-6">
             <img
               src={logoDark}
               alt="SC Santiago Corretora de Seguros"
               className={cn(
                 "w-auto object-contain group-hover:scale-105 transition-all duration-300",
-                isScrolled ? "h-20 md:h-24" : "h-24 md:h-28"
+                isScrolled ? "h-28 md:h-32" : "h-32 md:h-36"
               )}
             />
           </Link>
