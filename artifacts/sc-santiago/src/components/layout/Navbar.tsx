@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoDark from "@/assets/images/logo-dark.png";
+import logoDark from "@/assets/images/logo-header.png";
 
 const navLinks = [
   { href: "/", label: "Início" },

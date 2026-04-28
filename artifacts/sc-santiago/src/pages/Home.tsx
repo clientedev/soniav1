@@ -195,72 +195,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section className="py-24 bg-gray-50/50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Nossa Abordagem</h2>
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-              Não vendemos apólices. Construímos relacionamentos e tranquilidade.
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Acreditamos que cada pessoa e família é única. Por isso, nosso trabalho começa ouvindo você. Como sua consultora de bem-estar financeiro, a SC Santiago analisa seu momento de vida para desenhar a proteção exata que você precisa.
-            </p>
-            <Button variant="link" className="text-primary font-semibold group" asChild>
-              <Link href="/sobre" className="flex items-center">
-                Conheça nossa história
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Nossos Serviços</h2>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Soluções completas para cada etapa da sua vida
-              </h3>
-            </div>
-            <Button variant="outline" className="rounded-full" asChild>
-              <Link href="/servicos">Ver todos os detalhes</Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-primary/20 transition-all group relative overflow-hidden"
-                >
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${service.color} group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7" />
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground mb-3">{service.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {service.desc}
-                  </p>
-                  <Link href="/servicos" className="inline-flex items-center text-sm font-bold text-primary group/link">
-                    Saiba mais
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-24 bg-foreground text-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -322,6 +256,72 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-wider mt-1 text-white/80">anos de experiência</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Nossos Serviços</h2>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Soluções completas para cada etapa da sua vida
+              </h3>
+            </div>
+            <Button variant="outline" className="rounded-full" asChild>
+              <Link href="/servicos">Ver todos os detalhes</Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-primary/20 transition-all group relative overflow-hidden"
+                >
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${service.color} group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-xl font-bold text-foreground mb-3">{service.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    {service.desc}
+                  </p>
+                  <Link href="/servicos" className="inline-flex items-center text-sm font-bold text-primary group/link">
+                    Saiba mais
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-24 bg-gray-50/50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Nossa Abordagem</h2>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+              Não vendemos apólices. Construímos relacionamentos e tranquilidade.
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+              Acreditamos que cada pessoa e família é única. Por isso, nosso trabalho começa ouvindo você. Como sua consultora de bem-estar financeiro, a SC Santiago analisa seu momento de vida para desenhar a proteção exata que você precisa.
+            </p>
+            <Button variant="link" className="text-primary font-semibold group" asChild>
+              <Link href="/sobre" className="flex items-center">
+                Conheça nossa história
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
