@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+**/dist
+.git
+.cache
+.local
+.agents
+.upm
+.replit
+attached_assets/screenshots
+*.log
+.env
+.env.*

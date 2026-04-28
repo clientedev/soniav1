@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "-kfPU3PvI0xqI_7ozM2-R"
@@ -66,3 +65,9 @@ id = "vLwyFhiN5-1CwFNsKo16X"
 uri = "file://artifacts/sc-santiago/src/assets/images/hero-slide-4.png"
 type = "image"
 title = "generated_image"
+
+[[outputs]]
+id = "bn0AiqMivg7oIlgMFzYib"
+uri = "file://README.md"
+type = "text"
+title = "README com botão Deploy on Railway"

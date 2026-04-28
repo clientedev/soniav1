@@ -26,6 +26,14 @@ A modern, professional institutional website for SC Santiago Corretora de Seguro
 - Brand logo (light/dark variants) used in Navbar and Footer
 - Sônia's portrait featured in the "Diferenciais" section
 
+## Deploy
+
+Repositório pronto para deploy no Railway via Dockerfile. Veja o [README.md](./README.md) para o botão "Deploy on Railway" e instruções.
+
+- `Dockerfile` — build multi-stage (Node 20 + pnpm 10 → serve estático)
+- `railway.json` — configuração do Railway
+- `.dockerignore` — exclui artefatos de dev do build
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces
