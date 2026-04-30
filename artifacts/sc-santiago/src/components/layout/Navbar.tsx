@@ -45,8 +45,9 @@ export function Navbar() {
             <img
               src={logoDark}
               alt="SC Santiago Corretora de Seguros"
+              style={{ transform: "scale(4)", transformOrigin: "left center" }}
               className={cn(
-                "w-auto object-contain group-hover:scale-105 transition-all duration-300",
+                "w-auto object-contain transition-all duration-300",
                 isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
               )}
             />
