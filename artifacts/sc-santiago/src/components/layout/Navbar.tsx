@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoDark from "@/assets/images/logo-header.png";
+import logoDark from "@/assets/images/logo-header-navy.png";
 
 const navLinks = [
   { href: "/", label: "Início" },
@@ -35,8 +35,8 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-2"
-          : "bg-white py-3"
+          ? "bg-[#252c3e]/95 backdrop-blur-md shadow-sm border-b border-white/10 py-2"
+          : "bg-[#252c3e] py-3"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -60,13 +60,13 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "text-sm font-medium transition-colors hover:text-primary relative py-2",
-                      location === link.href ? "text-primary" : "text-foreground/80"
+                      "text-sm font-medium transition-colors hover:text-amber-300 relative py-2",
+                      location === link.href ? "text-amber-300" : "text-white/85"
                     )}
                   >
                     {link.label}
                     {location === link.href && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-300 rounded-full" />
                     )}
                   </Link>
                 </li>
@@ -83,7 +83,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground p-2 -mr-2"
+            className="md:hidden text-white p-2 -mr-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +95,7 @@ export function Navbar() {
       {/* Mobile Nav */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg transition-all duration-300 ease-in-out overflow-hidden",
+          "md:hidden absolute top-full left-0 right-0 bg-[#252c3e] border-b border-white/10 shadow-lg transition-all duration-300 ease-in-out overflow-hidden",
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >
@@ -106,14 +106,14 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "block text-lg font-medium py-2 transition-colors",
-                  location === link.href ? "text-primary" : "text-foreground/80 hover:text-primary"
+                  location === link.href ? "text-amber-300" : "text-white/85 hover:text-amber-300"
                 )}
               >
                 {link.label}
               </Link>
             </li>
           ))}
-          <li className="pt-4 border-t border-gray-100">
+          <li className="pt-4 border-t border-white/10">
             <Button
               className="w-full rounded-full gap-2"
               onClick={() => window.open("https://wa.me/5511947179169", "_blank")}
