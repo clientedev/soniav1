@@ -206,7 +206,7 @@ export default function Home() {
                 Por que escolher a SC Santiago?
               </h3>
               <p className="text-white/70 text-lg mb-8">
-                Nosso compromisso é com você, não com as seguradoras. Trabalhamos de forma independente para encontrar as melhores soluções do mercado para o seu perfil.
+                Nosso compromisso é em encontrar a melhor solução para você. Trabalhamos em parceria com as principais seguradoras do mercado para oferecer as opções mais adequadas ao seu perfil.
               </p>
               
               <ul className="space-y-6">
