@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logoDark from "@/assets/images/logo-header-navy.png";
+import logoDark from "@/assets/images/logo-header-transparent.png";
 
 const navLinks = [
   { href: "/", label: "Início" },
@@ -47,7 +47,7 @@ export function Navbar() {
               alt="SC Santiago Corretora de Seguros"
               className={cn(
                 "w-auto object-contain group-hover:scale-105 transition-all duration-300",
-                isScrolled ? "h-20 md:h-24" : "h-24 md:h-28"
+                isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
               )}
             />
           </Link>
