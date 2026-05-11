@@ -358,7 +358,7 @@ export default function Home() {
               {[...testimonials, ...testimonials].map((t, index) => (
                 <div
                   key={index}
-                  className="w-[400px] md:w-[500px] bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all relative flex flex-col shrink-0"
+                  className="max-w-[350px] md:max-w-[500px] bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all relative flex flex-col shrink-0"
                 >
                   <Quote className="w-10 h-10 text-primary/20 mb-4 shrink-0" />
 
@@ -368,7 +368,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <p className="text-foreground/90 leading-relaxed mb-6 flex-1 italic whitespace-pre-line text-sm md:text-base">
+                  <p className="text-foreground/90 leading-relaxed mb-6 italic whitespace-pre-line text-sm md:text-base">
                     “{t.text}”
                   </p>
 
