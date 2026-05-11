@@ -19,6 +19,16 @@ const heroSlides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
 const testimonials = [
   {
+    name: "Francisco Fonseca",
+    role: "Empresário",
+    text: "Sou cliente da Sonia há mais de 17 anos, desde a empresa anterior que ela atuava. Tive o privilégio de acompanhar o início da sua trajetória como corretora, sendo um dos seus primeiros clientes.\n\nÉ raro encontrar uma profissional que una excelência técnica e sensibilidade humana com tanta naturalidade. Ao longo do atendimento, ficou evidente o alto nível de profissionalismo, a organização impecável e o compromisso genuíno em oferecer soluções adequadas, sempre com transparência e segurança. Cada orientação foi clara, responsável e cuidadosamente pensada, transmitindo confiança em todas as etapas do processo.\n\nAlém da competência, o que mais se destaca é o caráter íntegro e a gentileza no trato com as pessoas. O atendimento vai além do esperado: é atencioso, paciente e verdadeiramente interessado no bem-estar do cliente. Sônia personifica a profissional que constrói relações de confiança duradouras, e faz a diferença pela ética, pela dedicação, pelo conhecimento e pelo respeito.",
+  },
+  {
+    name: "Tete Garcia",
+    role: "Empresária",
+    text: "Sônia é uma profissional altamente comprometida, dedicada a oferecer soluções que realmente façam diferença ao longo da jornada de seus clientes.\n\nSempre quando viajamos fazemos o seguro viagem, em uma ocasião minha mãe precisou de atendimento médico. Fomos prontamente orientados e direcionados com agilidade e profissionalismo!\n\nSeu trabalho é pautado por uma visão de longo prazo, prezando pelo cuidado e pela segurança de cada cliente. Destaca-se pela excelência no atendimento e pela forma ética e atenciosa com que conduz suas recomendações, tratando cada necessidade como se fosse de sua própria família.",
+  },
+  {
     name: "Ricardo T. F. Pires",
     role: "Médico",
     text: "Sou muito grato por ter a Sônia como minha corretora; admiro a seriedade e o desprendimento em encontrar a solução ideal pra mim e minha família. Isso vale ouro. Obrigado!",
@@ -27,16 +37,6 @@ const testimonials = [
     name: "Guilherme De J. M. Auada",
     role: "Médico",
     text: "Eu que agradeço, Sônia. Tenho total confiança em você. Ao ponto de confiar minha família a você e mudar todo o meu outro seguro. Agora estou em paz. Muito obrigado por tudo.",
-  },
-  {
-    name: "Amerisa F. Leite",
-    role: "Empresária",
-    text: "Sônia é uma profissional altamente comprometida, dedicada a oferecer soluções que realmente façam diferença ao longo da vida de seus clientes. Com ampla experiência no mercado, construiu uma trajetória baseada em confiança — fui, inclusive, um dos primeiros clientes a integrar sua carteira, justamente por acreditar em sua capacidade de sempre buscar o melhor para mim. Seu trabalho é pautado por uma visão de longo prazo, prezando pelo cuidado e pela segurança de cada cliente. Destaca-se pela excelência no atendimento e pela forma ética e atenciosa com que conduz suas recomendações, tratando cada necessidade como se fosse de sua própria família.",
-  },
-  {
-    name: "Lucas Rosin",
-    role: "Empresário",
-    text: "Conheci a Sônia muito novo, e ela me explicou da melhor maneira possível a necessidade de se proteger, a importância de um seguro, juntamente com suas diversas opções e peculiaridades, e sempre me transmitiu segurança, fazendo o melhor para mim e para o meu momento de vida. Confio tanto no trabalho e na atenção que ela sempre dedicou que a indiquei para dezenas de pessoas. Ainda hoje é sempre minha primeira consulta quando preciso de qualquer tipo de suporte. Obrigado por tudo.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 text-primary-foreground" />
-                <span>13 anos de experiência em proteção</span>
+                <span>14 anos de experiência em proteção</span>
               </div>
             </motion.div>
             
@@ -175,7 +175,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
                 <Clock className="w-6 h-6" />
               </div>
-              <h3 className="text-3xl font-serif font-bold text-foreground mb-1">+13 Anos</h3>
+              <h3 className="text-3xl font-serif font-bold text-foreground mb-1">+14 Anos</h3>
               <p className="text-muted-foreground font-medium">De Experiência Sólida</p>
             </div>
             <div className="flex flex-col items-center justify-center py-4 md:py-0">
@@ -253,7 +253,7 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">— Guilherme Auada, Médico</p>
               </div>
               <div className="hidden md:block absolute -top-6 -right-6 bg-primary text-white px-6 py-4 rounded-2xl shadow-xl">
-                <p className="font-serif text-3xl font-bold leading-none">+13</p>
+                <p className="font-serif text-3xl font-bold leading-none">+14</p>
                 <p className="text-xs uppercase tracking-wider mt-1 text-white/80">anos de experiência</p>
               </div>
             </div>
@@ -340,44 +340,55 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((t, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all relative flex flex-col"
-              >
-                <Quote className="w-10 h-10 text-primary/20 mb-4 shrink-0" />
+          <div className="relative overflow-hidden py-10">
+            {/* Gradient Fades */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50/70 to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50/70 to-transparent z-10 pointer-events-none" />
+            
+            <motion.div 
+              className="flex gap-8 w-max"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                ease: "linear",
+                duration: 40,
+                repeat: Infinity,
+              }}
+            >
+              {/* Double the array for seamless loop */}
+              {[...testimonials, ...testimonials].map((t, index) => (
+                <div
+                  key={index}
+                  className="w-[400px] md:w-[500px] bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all relative flex flex-col shrink-0"
+                >
+                  <Quote className="w-10 h-10 text-primary/20 mb-4 shrink-0" />
 
-                <div className="flex text-amber-400 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-
-                <p className="text-foreground/90 leading-relaxed mb-6 flex-1 italic">
-                  “{t.text}”
-                </p>
-
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-serif font-bold text-lg shrink-0">
-                    {t.name
-                      .split(" ")
-                      .filter((w) => w.length > 1 && w[0] === w[0].toUpperCase())
-                      .slice(0, 2)
-                      .map((w) => w[0])
-                      .join("")}
+                  <div className="flex text-amber-400 mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="w-4 h-4 fill-current" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-bold text-foreground leading-tight">{t.name}</p>
-                    <p className="text-sm text-muted-foreground">{t.role}</p>
+
+                  <p className="text-foreground/90 leading-relaxed mb-6 flex-1 italic whitespace-pre-line text-sm md:text-base">
+                    “{t.text}”
+                  </p>
+
+                  <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-serif font-bold text-lg shrink-0">
+                      {t.name
+                        .split(" ")
+                        .filter((w) => w.length > 1 && w[0] === w[0].toUpperCase())
+                        .slice(0, 2)
+                        .map((w) => w[0])
+                        .join("")}
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground leading-tight">{t.name}</p>
+                      <p className="text-sm text-muted-foreground">{t.role}</p>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>

@@ -30,7 +30,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Mais de uma década dedicando nosso tempo a proteger o que mais importa na vida das pessoas: o futuro de suas famílias.
+            Há mais de uma década, dedicamos nosso tempo a proteger o que é mais importante: a segurança e o futuro dos nossos clientes e de suas famílias.
           </motion.p>
         </div>
       </section>
@@ -50,13 +50,16 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  A SC Santiago Corretora de Seguros nasceu de um propósito claro da fundadora, Sonia Cristina Santiago: transformar a maneira como as pessoas enxergam o seguro de vida e o planejamento financeiro no Brasil.
+                  A SC Santiago Corretora de Seguros nasceu do propósito da fundadora Sônia Cristina Santiago: transformar a forma como as pessoas enxergam o seguro de vida e o planejamento financeiro no Brasil.
                 </p>
                 <p>
-                  Com 13 anos de atuação sólida no mercado, construímos uma reputação baseada na confiança, na transparência e no relacionamento próximo com cada cliente. Não somos apenas corretores; somos consultores de bem-estar financeiro.
+                  Com mais de 14 anos de experiência, construímos uma reputação baseada em confiança, transparência e relacionamentos duradouros. Não somos apenas corretores somos consultores de bem-estar financeiro.
                 </p>
                 <p>
-                  Localizada em São Paulo, mas com atendimento a clientes de norte a sul do país, a SC Santiago entende que cada família tem uma dinâmica única. Por isso, recusamos pacotes padronizados e focamos em soluções sob medida, trabalhando sempre com as seguradoras mais sólidas do mercado.
+                  Sediados em São Paulo e atuando em todo o Brasil, acreditamos que cada família tem uma história única. Por isso, desenvolvemos estratégias personalizadas, sempre ao lado das seguradoras mais sólidas do mercado.
+                </p>
+                <p>
+                  Nosso maior compromisso é garantir que as famílias que confiam em nós nunca enfrentem sozinhas os imprevistos da vida.
                 </p>
               </div>
               
@@ -82,7 +85,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Missão</h3>
                 <p className="text-muted-foreground">
-                  Proteger patrimônios e garantir a segurança financeira de famílias e empresas através de consultoria especializada e produtos de excelência.
+                  Oferecer proteção patrimonial e segurança financeira para famílias e empresas, com consultoria estratégica e produtos de excelência.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl h-full">
@@ -91,7 +94,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Visão</h3>
                 <p className="text-muted-foreground">
-                  Ser reconhecida nacionalmente como a corretora referência em atendimento humanizado e soluções personalizadas de proteção.
+                  Ser reconhecida nacionalmente pela dedicação em atendimento humanizado e pela entrega de soluções personalizadas de proteção.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl h-full sm:col-span-2">
@@ -116,7 +119,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-serif font-bold mb-2">13+</div>
+              <div className="text-4xl md:text-5xl font-serif font-bold mb-2">14+</div>
               <div className="text-primary-foreground font-medium">Anos de Mercado</div>
             </div>
             <div>

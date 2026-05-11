@@ -18,7 +18,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
-              13 anos de experiência protegendo famílias e empresas em todo o Brasil. Confiança, transparência e o cuidado que você merece.
+              14 anos de experiência protegendo famílias e empresas em todo o Brasil. Confiança, transparência e o cuidado que você merece.
             </p>
             <div className="flex items-center gap-4">
               <a 
