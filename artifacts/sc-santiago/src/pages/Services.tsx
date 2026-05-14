@@ -149,12 +149,19 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <Button size="lg" className="rounded-full shadow-sm" asChild>
-                    <Link href={`/contato?servico=${service.title}`}>
-                      Solicitar Cotação
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="rounded-full shadow-sm" asChild>
+                      <Link href={`/servicos/${service.id}`}>
+                        Saiba mais
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                    <Button size="lg" variant="outline" className="rounded-full shadow-sm" asChild>
+                      <Link href={`/contato?servico=${service.title}`}>
+                        Solicitar Cotação
+                      </Link>
+                    </Button>
+                  </div>
                 </motion.div>
 
               </div>

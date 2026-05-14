@@ -11,6 +11,7 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
+import ServiceDetail from "@/pages/ServiceDetail";
 import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/sobre" component={About} />
         <Route path="/servicos" component={Services} />
+        <Route path="/servicos/:slug" component={ServiceDetail} />
         <Route path="/contato" component={Contact} />
         <Route component={NotFound} />
       </Switch>

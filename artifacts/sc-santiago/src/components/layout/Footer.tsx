@@ -62,19 +62,19 @@ export function Footer() {
             <h3 className="font-serif font-bold text-white text-lg mb-6">Nossos Serviços</h3>
             <ul className="space-y-4">
               <li>
-                <Link href="/servicos" className="text-sm hover:text-white transition-colors">Seguro de Vida</Link>
+                <Link href="/servicos/vida" className="text-sm hover:text-white transition-colors">Seguro de Vida</Link>
               </li>
               <li>
-                <Link href="/servicos" className="text-sm hover:text-white transition-colors">Plano de Saúde</Link>
+                <Link href="/servicos/saude" className="text-sm hover:text-white transition-colors">Plano de Saúde</Link>
               </li>
               <li>
-                <Link href="/servicos" className="text-sm hover:text-white transition-colors">Consórcio</Link>
+                <Link href="/servicos/consorcio" className="text-sm hover:text-white transition-colors">Consórcio</Link>
               </li>
               <li>
-                <Link href="/servicos" className="text-sm hover:text-white transition-colors">Previdência Privada</Link>
+                <Link href="/servicos/previdencia" className="text-sm hover:text-white transition-colors">Previdência Privada</Link>
               </li>
               <li>
-                <Link href="/servicos" className="text-sm hover:text-white transition-colors">Seguro de Viagem</Link>
+                <Link href="/servicos/viagem" className="text-sm hover:text-white transition-colors">Seguro de Viagem</Link>
               </li>
             </ul>
           </div>

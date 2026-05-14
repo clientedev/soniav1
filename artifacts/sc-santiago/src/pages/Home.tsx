@@ -46,35 +46,35 @@ const services = [
     title: "Seguro de Vida",
     desc: "Proteção financeira para sua família em momentos difíceis.",
     color: "bg-blue-50 text-blue-600",
-    href: "/servicos#vida"
+    href: "/servicos/vida"
   },
   {
     icon: HeartPulse,
     title: "Plano de Saúde",
     desc: "Acesso à saúde de qualidade para você e sua família.",
     color: "bg-emerald-50 text-emerald-600",
-    href: "/servicos#saude"
+    href: "/servicos/saude"
   },
   {
     icon: Car,
     title: "Consórcio",
     desc: "Realize seus sonhos com planejamento e sem juros.",
     color: "bg-amber-50 text-amber-600",
-    href: "/servicos#consorcio"
+    href: "/servicos/consorcio"
   },
   {
     icon: Building,
     title: "Previdência Privada",
     desc: "Garanta seu futuro com planejamento financeiro.",
     color: "bg-purple-50 text-purple-600",
-    href: "/servicos#previdencia"
+    href: "/servicos/previdencia"
   },
   {
     icon: Plane,
     title: "Seguro de Viagem",
     desc: "Viaje com tranquilidade sabendo que está protegido.",
     color: "bg-sky-50 text-sky-600",
-    href: "/servicos#viagem"
+    href: "/servicos/viagem"
   }
 ];
 
