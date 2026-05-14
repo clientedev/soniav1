@@ -167,8 +167,13 @@ export default function ServiceDetail() {
   return (
     <main className="flex-1 w-full pt-20">
       {/* Hero */}
-      <section className={`bg-gradient-to-br ${service.color} text-white py-20 md:py-28 relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="text-white py-20 md:py-36 relative overflow-hidden min-h-[60vh] flex items-center">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
