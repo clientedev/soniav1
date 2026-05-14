@@ -45,31 +45,36 @@ const services = [
     icon: Heart,
     title: "Seguro de Vida",
     desc: "Proteção financeira para sua família em momentos difíceis.",
-    color: "bg-blue-50 text-blue-600"
+    color: "bg-blue-50 text-blue-600",
+    href: "/servicos#vida"
   },
   {
     icon: HeartPulse,
     title: "Plano de Saúde",
     desc: "Acesso à saúde de qualidade para você e sua família.",
-    color: "bg-emerald-50 text-emerald-600"
+    color: "bg-emerald-50 text-emerald-600",
+    href: "/servicos#saude"
   },
   {
     icon: Car,
     title: "Consórcio",
     desc: "Realize seus sonhos com planejamento e sem juros.",
-    color: "bg-amber-50 text-amber-600"
+    color: "bg-amber-50 text-amber-600",
+    href: "/servicos#consorcio"
   },
   {
     icon: Building,
     title: "Previdência Privada",
     desc: "Garanta seu futuro com planejamento financeiro.",
-    color: "bg-purple-50 text-purple-600"
+    color: "bg-purple-50 text-purple-600",
+    href: "/servicos#previdencia"
   },
   {
     icon: Plane,
     title: "Seguro de Viagem",
     desc: "Viaje com tranquilidade sabendo que está protegido.",
-    color: "bg-sky-50 text-sky-600"
+    color: "bg-sky-50 text-sky-600",
+    href: "/servicos#viagem"
   }
 ];
 
@@ -295,7 +300,7 @@ export default function Home() {
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {service.desc}
                   </p>
-                  <Link href="/servicos" className="inline-flex items-center text-sm font-bold text-primary group/link">
+                  <Link href={service.href} className="inline-flex items-center text-sm font-bold text-primary group/link">
                     Saiba mais
                     <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
@@ -350,7 +355,7 @@ export default function Home() {
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 ease: "linear",
-                duration: 40,
+                duration: 90,
                 repeat: Infinity,
               }}
             >
